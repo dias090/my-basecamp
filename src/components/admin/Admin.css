@@ -1,0 +1,15 @@
+.brand-logo {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.brand-logo svg {
+    position: relative;
+    top: 1px;
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+    grid-column-gap: 5px;
+}
