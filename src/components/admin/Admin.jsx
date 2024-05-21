@@ -2,7 +2,7 @@
   import { onAuthStateChanged } from "firebase/auth";
   import { auth } from "../../firebase";
   import { useNavigate } from "react-router-dom";
-  import { collection, query, where, onSnapshot, doc, deleteDoc, getDocs, updateDoc } from "firebase/firestore";
+  import { collection, query, where, onSnapshot, doc, deleteDoc, getDoc, updateDoc } from "firebase/firestore";
   import { db } from "../../firebase";
 
   import Navbar from "../navbar/Navbar";
@@ -13,6 +13,8 @@
     const [loading, setLoading] = useState(true);
     const [users, setUsers] = useState([]);
 
+    
+    
     const navigate = useNavigate();
     useEffect(() => {
       const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -39,23 +41,11 @@
     }, [db]);
 
     const handleDeleteUser = async (userDocId) => {
-      if (!userDocId) {
-        console.error("User object is invalid or null.");
-        return;
-      }
-    
       try {
-        const projectsCollectionRef = collection(db, 'Projects');
-        const projectsQuery = query(projectsCollectionRef, where('projectsAuthor', '==', userDocId));
-        const projectsSnapshot = await getDocs(projectsQuery);
-        const projectDeletePromises = projectsSnapshot.docs.map(projectDoc => deleteDoc(projectDoc.ref));
-        await Promise.all(projectDeletePromises);
-        const userDocRef = doc(db, 'Users', userDocId);
-        await deleteDoc(userDocRef);
-    
+        await deleteDoc(doc(db, "Users", userDocId));
         console.log("User deleted successfully");
       } catch (error) {
-        console.error("Error deleting user:", error);
+        console.error("Error deleting user: ", error);
       }
     };
 

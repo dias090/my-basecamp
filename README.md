@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Welcome to My Basecamp 1
+***
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Task
+The project named My Basecamp 1 is a web application that allows users to sign up, sign in, and delete their accounts. Additionally, it provides functionality for users to add, edit, and delete projects. The application also includes an admin feature, whereby an admin user can view all registered users, change their roles (admin or non-admin), and delete their accounts.
 
-## Available Scripts
+## Description
+My Basecamp 1 is built using React.js and Firebase. The application is designed to be user-friendly and easy to navigate. It provides a platform for users to manage their projects efficiently and for admin users to oversee the user base.
 
-In the project directory, you can run:
+## Installation
+To install and run My Basecamp 1 on your local machine, follow these steps:
 
-### `npm start`
+1. Ensure that you have Node.js and npm installed on your computer.
+2. Clone the My Basecamp 1 repository from GitHub.
+```
+git clone https://github.com/dias090/my-basecamp1.git
+```
+3. Navigate to the project directory in your terminal or command prompt.
+```
+cd my-basecamp1
+```
+4. Run `npm install` to install the required dependencies.
+```
+npm install
+```
+5. Run `npm start` to launch the application.
+```
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+For more detailed information on how to run a React app, you can refer to the official [React documentation](https://reactjs.org/docs/getting-started.html).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
+My Basecamp 1 is a web-based application and can be accessed using any modern web browser.
 
-### `npm test`
+- To sign up, navigate to the sign-up page and enter your details.
+- To sign in, navigate to the sign-in page and enter your credentials.
+- To delete your account, navigate to the profile page and click on the delete account button.
+- To add a project, navigate to the projects page and click on the add project button.
+- To edit a project, navigate to the projects page, click on the project you want to edit, and then click on the edit button.
+- To delete a project, navigate to the projects page, click on the project you want to delete, and then click on the delete button.
+- To view all users (admin feature), navigate to the users page.
+- To change a user's role (admin feature), navigate to the users page, click on the user you want to modify, and then select the new role.
+- To delete a user (admin feature), navigate to the users page, click on the user you want to delete, and then click on the delete button.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Project Link](https://my-basecamp-1.netlify.app/)
 
-### `npm run build`
+## The Core Team
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Talipov Said Full-Stack Developer
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
+<span><img alt="Qwasar SV -- Software Engineering School's Logo" src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' /></span>

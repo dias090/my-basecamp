@@ -2,7 +2,6 @@ import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min.js';
 
 import { Routes, Route } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db } from './firebase';
@@ -35,36 +34,33 @@ function App() {
       if (user) {
         const userDocRef = doc(db, 'Users', user.uid);
         const userDocSnap = await getDoc(userDocRef);
-        setIsAdmin(userDocSnap.data()?.Admin || false); // Notice the optional chaining here
+        setIsAdmin(userDocSnap.data().Admin || false);
       }
       setLoading(false);
     });
-  
+
     return () => {
       unsubscribe();
     };
   }, []);
-  
 
   if (loading) {
     return <Loader />;
   }
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="*" element={<Page404 />} />
-        <Route path="/" element={authUser ? <Home /> : <Form />} />
+    <Routes>
+      <Route path="*" element={<Page404 />} />
+      <Route path="/" element={authUser ? <Home /> : <Form />} />
 
-        <Route path="/login" element={authUser ? <Home/> : <Login />} />
-        <Route path="/signup" element={authUser ? <Home/> : <Signup />} />
-        <Route path="/form" element={authUser ? <Home/> : <Form />} />
+      <Route path="/login" element={authUser ? <Navigate to={'/'}/> : <Login />} />
+      <Route path="/signup" element={authUser ? <Navigate to={'/'}/> : <Signup />} />
+      <Route path="/form" element={authUser ? <Navigate to={'/'}/> : <Form />} />
 
-        <Route path="/add" element={authUser ? <AddNew title="Project" inputs={inputs} />: <Form/>}/>
-        <Route path="/edit/:projectId" element={authUser ? <EditProject /> : <Form/>} />
-        <Route path="/viewusers" element={isAdmin ? <Admin /> : <Form/>} />
-      </Routes>
-    </BrowserRouter>
+      <Route path="/add" element={authUser ? <AddNew title="Project" inputs={inputs} />: <Navigate to={'/'}/>}/>
+      <Route path="/edit/:projectId" element={authUser ? <EditProject /> : <Navigate to={'/'}/>} />
+      <Route path="/viewusers" element={isAdmin ? <Admin /> : <Navigate to={'/'}/>} />
+    </Routes>
   );
   
 }
