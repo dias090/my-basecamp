@@ -18,7 +18,7 @@ const ShowProjects = ({ userId }) => {
       });
       return () => unsubscribe();
     }
-  }, [userId, db]);
+  }, [userId]);
 
   const handleDelete = async (projectId) => {
     try {
@@ -40,7 +40,7 @@ const ShowProjects = ({ userId }) => {
           </div>
           <div className="card-action">
             <Link to={`/edit/${project.id}`}>Edit<i className="material-icons">edit</i></Link>
-            <a href="" onClick={() => handleDelete(project.id)}>Delete<i className="material-icons">delete</i></a>
+            <a href="/" onClick={() => handleDelete(project.id)}>Delete<i className="material-icons">delete</i></a>
           </div>
         </div>
       ))}

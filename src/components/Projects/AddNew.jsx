@@ -2,22 +2,21 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import M from 'materialize-css/dist/js/materialize.min.js';
 import { onAuthStateChanged, getAuth } from "firebase/auth";
+import Loader from "../loader/Loader"
 import '../home/home.css'
-import { doc, addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase";
 import Navbar from "../navbar/Navbar";
 
 const AddNew = ({ inputs, title }) => {
-  const [authUser, setAuthUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const auth = getAuth();
   const navigate = useNavigate();
   const user = auth.currentUser;
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setAuthUser(user);
       setLoading(false);
     });
     setTimeout(() => {
@@ -28,13 +27,17 @@ const AddNew = ({ inputs, title }) => {
     return () => {
       unsubscribe();
     };
-  }, []);
+  }, [auth]);
 
   const handleInputChange = (e, inputName) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [inputName]: e.target.value,
-    }));
+    if (formData === null) {
+      setFormData({ [inputName]: e.target.value });
+    } else {
+      setFormData((prevState) => ({
+        ...prevState,
+        [inputName]: e.target.value,
+      }));
+    }
   };
 
   const handleAdd = async (e) => {
@@ -58,7 +61,9 @@ const AddNew = ({ inputs, title }) => {
     }
   };
 
-  
+  if(loading){
+    return <Loader/>
+  }
 
   return (
     <div>

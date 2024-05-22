@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.52f45199.css",
+    "main.js": "/static/js/main.55daf965.js",
+    "static/media/group-svgrepo-com.svg": "/static/media/group-svgrepo-com.cb17d55a938ada901af2caf0d00e8bbe.svg",
+    "index.html": "/index.html",
+    "main.52f45199.css.map": "/static/css/main.52f45199.css.map",
+    "main.55daf965.js.map": "/static/js/main.55daf965.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52f45199.css",
+    "static/js/main.55daf965.js"
+  ]
+}

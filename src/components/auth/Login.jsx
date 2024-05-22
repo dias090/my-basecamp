@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login&Signup.css"
 import { auth } from "../../firebase";
@@ -60,18 +60,6 @@ const Login = () => {
                 <form onSubmit={login} className="col s4 m6 offset-m3 offset-s4 z-depth-1">
                     <h1 className="center">Login</h1>
                     <div className="row">
-                        {/* <div className="input-field col s10 offset-s1">
-                            <i className="material-icons prefix">account_circle</i>
-                            <input 
-                                id="username" 
-                                type="text" 
-                                className="validate" 
-                                name="username" 
-                                value={username} 
-                                onChange={(e)=>{setUsername(e.target.value)}}
-                            />
-                            <label htmlFor="username">User Name</label>
-                        </div> */}
                         <div className="input-field col s10 offset-s1">
                             <i className="material-icons prefix">account_circle</i>
                             <input 
