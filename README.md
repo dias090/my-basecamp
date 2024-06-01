@@ -28,7 +28,7 @@ npm install
 npm start
 ```
 
-Or you can see my project via this link: [myBasecamp1]().
+Or you can see my project via this link: <a href="https://my-basecamp-six.vercel.app/" target="_blank">myBasecamp1</a>.
 
 ## Usage
 My Basecamp 1 is a web-based application and can be accessed using any modern web browser.
@@ -51,6 +51,6 @@ password: `user123`
 - Talipov Said Full-Stack Developer
 
 <div style="display:flex;align-items:center;">
-    <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
+    <span><i>Made at <a href='https://qwasar.io' target="_blank">Qwasar SV -- Software Engineering School</a></i></span>
     <span><img alt="Qwasar SV -- Software Engineering School's Logo" src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' style="margin-left:10px;" /></span>
 </div>
