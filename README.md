@@ -28,7 +28,7 @@ npm install
 npm start
 ```
 
-For more detailed information on how to run a React app, you can refer to the official [React documentation](https://reactjs.org/docs/getting-started.html).
+Or you can see my project via this link: [myBasecamp1]().
 
 ## Usage
 My Basecamp 1 is a web-based application and can be accessed using any modern web browser.
@@ -43,11 +43,14 @@ My Basecamp 1 is a web-based application and can be accessed using any modern we
 - To change a user's role (admin feature), navigate to the users page, click on the user you want to modify, and then select the new role.
 - To delete a user (admin feature), navigate to the users page, click on the user you want to delete, and then click on the delete button.
 
-[Project Link](https://my-basecamp-1.netlify.app/)
+> For Login in as an admin you can use this account:<br/>
+email: `user@gmail.com`  <br/>
+password: `user123`
 
 ## The Core Team
-
 - Talipov Said Full-Stack Developer
 
-<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
-<span><img alt="Qwasar SV -- Software Engineering School's Logo" src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' /></span>
+<div style="display:flex;align-items:center;">
+    <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
+    <span><img alt="Qwasar SV -- Software Engineering School's Logo" src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' style="margin-left:10px;" /></span>
+</div>

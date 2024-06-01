@@ -74,6 +74,7 @@ const Admin = () => {
                 <th>User name</th>
                 <th>Email</th>
                 <th>Admin</th>
+                <th>Super Admin</th>
                 <th>delete/remove admin</th>
             </tr>
             </thead>
@@ -84,8 +85,11 @@ const Admin = () => {
                     <td>{user.userName}</td>
                     <td>{user.email}</td>
                     <td>{user.Admin ? 'Yes' : 'No'}</td>
+                    <td>{user.superAdmin ? 'Yes' : 'No'}</td>
                     <td className="button_container">
-                      <button onClick={() => handleDeleteUser(user.id)} className="btn red"><i className="material-icons">delete</i></button>
+                      {!user.superAdmin && (
+                        <button onClick={() => handleDeleteUser(user.id)} className="btn red"><i className="material-icons">delete</i></button>
+                      )}
                       <button onClick={() => handleToggleAdmin(user)} className="btn blue">{user.Admin ? (<i className="material-icons">person_off</i>) : (<i className="material-icons">person</i>)}</button>
                     </td>
                 </tr>

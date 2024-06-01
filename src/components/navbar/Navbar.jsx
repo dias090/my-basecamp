@@ -10,9 +10,17 @@ import AdminIcon from "../../assets/admin_icon";
 const Navbar = () => {
   const [authUser, setAuthUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
-  const navigate = useNavigate();
+  const [width, setWidth] = useState(window.innerWidth);
 
+  const navigate = useNavigate();
+  
   useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+  
+    window.addEventListener('resize', handleResize);
+
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setAuthUser(user);
       if (user) {
@@ -30,6 +38,7 @@ const Navbar = () => {
 
     return () => {
       unsubscribe();
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -70,7 +79,7 @@ const Navbar = () => {
     <div>
       <nav className="blue-grey darken-4">
         <div className="nav-wrapper container">
-          <a href="/" className="brand-logo">Welcome {authUser?.displayName} {isAdmin && <AdminIcon/>}</a>
+          <a href="/" className="brand-logo">{width > 700 && "Welcome"} {authUser?.displayName} {isAdmin && <AdminIcon/>}</a>
           <a href='/' className="sidenav-trigger" data-target="mobile-demo"><i className="material-icons right">menu</i></a>
           <ul className="right hide-on-med-and-down">
             {isAdmin && (<li><a href="/viewusers"><i className="material-icons right">list_alt</i>All Users</a></li>)}

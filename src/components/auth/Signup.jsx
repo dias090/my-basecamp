@@ -50,7 +50,8 @@ const Signup = () => {
           await setDoc(doc(db, "Users", user.uid), {
             userName: username,
             email: email,
-            Admin: false
+            Admin: false,
+            superAdmin: false,
           });
         }
         setError("");
